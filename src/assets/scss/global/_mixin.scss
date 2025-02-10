@@ -1,0 +1,15 @@
+@use "variable" as v;
+
+@mixin xs {
+    @media screen and (max-width: v.$break-point) {
+        @content;
+    }
+}
+@mixin sm {
+    @media screen and (min-width: (v.$break-point + 1)) {
+        @content;
+    }
+}
+@mixin effect{
+    transition: all v.$transition-fast ease-in-out;
+}

@@ -1,11 +1,10 @@
 <script setup>
-import Home from './components/Home.vue'
 
 </script>
 
 <template>
-    <div>
-    <router-view></router-view>
+  <div class="">
+    <h1>RegistPage</h1>
   </div>
 </template>
 
