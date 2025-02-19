@@ -52,7 +52,7 @@ const register = () => {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: rgba(103, 175, 208, 0.5);
+  background:linear-gradient(30.82deg, #5C55D7 12.75%, #53DDBC 88.24%);
 }
 
 .register-box {

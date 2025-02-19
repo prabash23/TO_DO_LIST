@@ -8,25 +8,20 @@ const loginPassword = ref('');
 
 
 const login = () => {
-  let users = JSON.parse(localStorage.getItem('users')) || [];
-  console.log("users", users);
-
+  let users = JSON.parse(localStorage.getItem("users")) || [];
   const trimmedUsername = loginUsername.value.trim();
   const trimmedPassword = loginPassword.value.trim();
-
-  console.log("入力されたユーザー名:", trimmedUsername);
-  console.log("入力されたパスワード:", trimmedPassword);
-
   const user = users.find(user => user.username === trimmedUsername && user.password === trimmedPassword);
 
   console.log("user", user);
   if (user) {
-    alert(`ログイン成功: ${user.username}`);
-    router.push('/home');
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
+    router.push({ name: "home" }); 
   } else {
-    alert('ユーザー名またはパスワードが違います');
+    alert("ユーザー名またはパスワードが違います");
   }
 };
+
 
 
 </script>
@@ -49,7 +44,7 @@ const login = () => {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background: rgba(103, 175, 208, 0.5);
+  background: linear-gradient(30.82deg, #5C55D7 12.75%, #53DDBC 88.24%);
 }
 
 .login-box {
