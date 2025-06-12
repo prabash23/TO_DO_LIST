@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import AccountDetails from '../components/account.vue';
+import Todo from '../components/todo.vue';
 
 
 const router = useRouter();
@@ -35,6 +36,9 @@ const toggleAccountDetails = () => {
     </nav>
   </div>
   <AccountDetails v-if="accountDetails"></AccountDetails>
+  <Todo/>
+
+
 </template>
 
 <style scoped lang="scss">
@@ -43,6 +47,7 @@ const toggleAccountDetails = () => {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  background: rgba(249, 248, 248, 0.8);
 }
 
 .nav-bar {
