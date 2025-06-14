@@ -126,6 +126,7 @@
     @include g.xs {
       min-width: auto;
       max-width: none;
+      width: 100%;
       margin: 0;
       border-radius: 15px;
       max-height: calc(100vh - 120px);
